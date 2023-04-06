@@ -1,7 +1,7 @@
-package ia;
+package pokemon;
 
-public class Schillok extends Wasserpokemon {
-	public Schillok(String name){
+public class Wartortle extends WaterPokemon {
+	public Wartortle(String name){
 		super.name = name;
 		angriffspunkte = 25;
 		kampfpunkte = 140;
@@ -14,7 +14,7 @@ public class Schillok extends Wasserpokemon {
 		pokedexID = "7";
 	}
 	
-	public Schillok(Schiggy vorstufe) {
+	public Wartortle(Squirtle vorstufe) {
 		this.name = vorstufe.name;
 		this.kampfpunkte = vorstufe.kampfpunkte+20;
 		angriffspunkte = 25;
@@ -23,7 +23,7 @@ public class Schillok extends Wasserpokemon {
 		pokedexID = "7";
 	}
 
-	public Turtok entwickeltSich() {
-		return new Turtok(this);
+	public Blastoise evolve() {
+		return new Blastoise(this);
 	}
 }
