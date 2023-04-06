@@ -1,11 +1,11 @@
-package ia;
-public abstract class Wasserpokemon extends Pokemon {
+package pokemon;
+public abstract class WaterPokemon extends Pokemon {
 
-	public Wasserpokemon(String name) {
+	public WaterPokemon(String name) {
 		super.name = name;
 	}
 	
-	public Wasserpokemon() {
+	public WaterPokemom() {
 	}
 
 	public boolean entwicklungsCheck(Pokemon[] team) {
@@ -29,5 +29,5 @@ public abstract class Wasserpokemon extends Pokemon {
 		return false;
 
 	}
-	public abstract Wasserpokemon entwickeltSich();
+	public abstract WaterPokemon entwickeltSich();
 }
