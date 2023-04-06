@@ -1,7 +1,7 @@
-package ia;
+package pokemon;
 
-public class Bisaknosp extends Pflanzenpokemon{
-	public Bisaknosp(String name){
+public class Ivysaur extends GrassPokemon{
+	public Ivysaur(String name){
 		super.name = name;
 		angriffspunkte = 25;
 		kampfpunkte = 140;
@@ -14,7 +14,7 @@ public class Bisaknosp extends Pflanzenpokemon{
 		pokedexID = "4";
 	}
 	
-	public Bisaknosp(Bisasam vorstufe) {
+	public Ivysaur(Bulbasaur vorstufe) {
 		this.name = vorstufe.name;
 		this.kampfpunkte = vorstufe.kampfpunkte;
 		angriffspunkte = 25;
@@ -23,8 +23,8 @@ public class Bisaknosp extends Pflanzenpokemon{
 		pokedexID = "4";
 	}
 	
-	public Bisaflor entwickeltSich() {
-		return new Bisaflor(this);
+	public Venusaur entwickeltSich() {
+		return new Venusaur(this);
 	}
 
 }
