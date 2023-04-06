@@ -1,4 +1,4 @@
-package ia;
+package pokemon;
 /**
  * @author kat
  * @see Pokemon
@@ -21,19 +21,19 @@ package ia;
 public class PokeGame {
 	public static Pokemon[] pokedex = new Pokemon[9];
 	public static Pokemon[] team = new Pokemon[5];
-	public static Pokemon meinPokemon = null;
+	public static Pokemon myPokemon = null;
 	public static Pokemon wildesPokemon;
 
 	public static void main(String[] args) {
-		pokedex[0] = new Glumanda("Wildes Pokemon");
-		pokedex[1] = new Glutexo("Wildes Pokemon");
-		pokedex[2] = new Glurak("Wildes Pokemon");		
-		pokedex[3] = new Bisasam("Wildes Pokemon");
-		pokedex[4] = new Bisaknosp("Wildes Pokemon");
-		pokedex[5] = new Bisaflor("Wildes Pokemon");
-		pokedex[6] = new Schiggy("Wildes Pokemon");
-		pokedex[7] = new Schillok("Wildes Pokemon");
-		pokedex[8] = new Turtok("Wildes Pokemon");
+		pokedex[0] = new Bulbasaur("Wildes Pokemon");
+		pokedex[1] = new Ivysaur("Wildes Pokemon");
+		pokedex[2] = new Venusaur("Wildes Pokemon");		
+		pokedex[3] = new Charmander("Wildes Pokemon");
+		pokedex[4] = new Charmeleon("Wildes Pokemon");
+		pokedex[5] = new Charizard("Wildes Pokemon");
+		pokedex[6] = new Squirtle("Wildes Pokemon");
+		pokedex[7] = new Wartortle("Wildes Pokemon");
+		pokedex[8] = new Blastoise("Wildes Pokemon");
 		
 		team[0] = new Glumanda("Heinz");
 		team[1] = new Glutexo("Karl");
