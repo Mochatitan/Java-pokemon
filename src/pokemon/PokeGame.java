@@ -65,16 +65,16 @@ public class PokeGame {
 	}
 	
 	public static void askForPokemon() {
-		System.out.println("Welches Pokemon möchtest du einsetzen?");		
-	}
-	
-	public static void printSieg() {
-		System.out.print("Der Gegner wurde besiegt.");
-	}
-		
-	public static void chooseAttacke() {
-		System.out.print("Du bist dran! Waehle eine Attacke!");
-	}
+        System.out.println("Which Pokemon do you want to use?");
+        }
+
+        public static void printWin() {
+        System.out.print("The enemy has been defeated.");
+        }
+
+        public static void chooseAttack() {
+        System.out.print("Your turn! Choose a move!");
+        }
 	
 	public static void printEntwicklung() {
 		if(meinPokemon instanceof Feuerpokemon) {
