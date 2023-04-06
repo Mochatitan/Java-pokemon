@@ -17,7 +17,7 @@ public class Bulbasaur extends GrassPokemon {
 	public Bulbasaur() {	
 	}
 	
-	public Bulbasaur entwickeltSich() {
+	public Ivysaur evolve() {
 		return new Ivysaur(this);
 	}
 }
