@@ -22,24 +22,24 @@ public class PokeGame {
 	public static Pokemon[] pokedex = new Pokemon[9];
 	public static Pokemon[] team = new Pokemon[5];
 	public static Pokemon myPokemon = null;
-	public static Pokemon wildesPokemon;
+	public static Pokemon wildPokemon;
 
 	public static void main(String[] args) {
-		pokedex[0] = new Bulbasaur("Wildes Pokemon");
-		pokedex[1] = new Ivysaur("Wildes Pokemon");
-		pokedex[2] = new Venusaur("Wildes Pokemon");		
-		pokedex[3] = new Charmander("Wildes Pokemon");
-		pokedex[4] = new Charmeleon("Wildes Pokemon");
-		pokedex[5] = new Charizard("Wildes Pokemon");
-		pokedex[6] = new Squirtle("Wildes Pokemon");
-		pokedex[7] = new Wartortle("Wildes Pokemon");
-		pokedex[8] = new Blastoise("Wildes Pokemon");
+		pokedex[0] = new Bulbasaur("Wild Pokemon");
+		pokedex[1] = new Ivysaur("Wild Pokemon");
+		pokedex[2] = new Venusaur("Wild Pokemon");		
+		pokedex[3] = new Charmander("Wild Pokemon");
+		pokedex[4] = new Charmeleon("Wild Pokemon");
+		pokedex[5] = new Charizard("Wild Pokemon");
+		pokedex[6] = new Squirtle("Wild Pokemon");
+		pokedex[7] = new Wartortle("Wild Pokemon");
+		pokedex[8] = new Blastoise("Wild Pokemon");
 		
-		team[0] = new Glumanda("Heinz");
-		team[1] = new Glutexo("Karl");
-		team[2] = new Schiggy("Ulrich");
-		team[3] = new Bisasam("Lollipop");
-		team[4] = new Schillok("Zauberfee");
+		team[0] = new Charmander("Heinz");
+		team[1] = new Charmeleon("Karl");
+		team[2] = new Squirtle("Ulrich");
+		team[3] = new Bulbasaur("Lollipop");
+		team[4] = new Wartortle("Zauberfee");
 		
 		new Thread(new PokeGui()).start();	
 	} //main
@@ -51,17 +51,17 @@ public class PokeGame {
 	
 	//DefaultAttack defines attack with status "neutral" == it is always "tackle"
 	public static void printDefaultAttack() {
-		System.out.println(meinPokemon.name + " (" + meinPokemon.getClass().getSimpleName() + ") " + meinPokemon.attacke[0][0] + "!");
+		System.out.println(myPokemon.name + " (" + myPokemon.getClass().getSimpleName() + ") " + myPokemon.attack[0][0] + "!");
 	}
 	
 	//TypAttack depends on the attacking pokemon
-	public static void printTypAttack() {
-		System.out.println(meinPokemon.name + " (" + meinPokemon.getClass().getSimpleName() + ") " + meinPokemon.attacke[1][0] + "!");
+	public static void printTypeAttack() {
+		System.out.println(myPokemon.name + " (" + myPokemon.getClass().getSimpleName() + ") " + myPokemon.attack[1][0] + "!");
 	}
 	
 	public static void IntroTextWildesPokemonGreiftAn() {
-		System.out.println("Ein " + wildesPokemon.getClass().getSimpleName() + " (wild) "  + "greift an...");
-		System.out.println(wildesPokemon);
+		System.out.println("A wild " + wildPokemon.getClass().getSimpleName()  + " attacks...");
+		System.out.println(wildPokemon);
 	}
 	
 	public static void askForPokemon() {
