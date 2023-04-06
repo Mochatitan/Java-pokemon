@@ -1,8 +1,8 @@
-package ia;
+package pokemon;
 
 
-public class Turtok extends Wasserpokemon{
-	public Turtok(String name){
+public class Blastoise extends WaterPokemon{
+	public Blastoise(String name){
 		super.name = name;
 		angriffspunkte = 30;
 		kampfpunkte = 160;
@@ -15,7 +15,7 @@ public class Turtok extends Wasserpokemon{
 		pokedexID = "8";
 	}
 	
-	public Turtok(Schillok vorstufe) {
+	public Blastoise(Wartortle vorstufe) {
 		this.name = vorstufe.name;
 		this.kampfpunkte = vorstufe.kampfpunkte+20;
 		angriffspunkte = 160;
@@ -25,7 +25,7 @@ public class Turtok extends Wasserpokemon{
 	}
 	
 	@Override
-	public Turtok entwickeltSich() {
+	public Blastoise evolve() {
 		return this;
 	}
 }
