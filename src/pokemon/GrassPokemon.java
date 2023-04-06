@@ -25,7 +25,7 @@ public abstract class GrassPokemon extends Pokemon{
 		return false;
 	}
 	
-	public abstract GrassPokemon entwickeltSich();
+	public abstract GrassPokemon evolve();
 
 }
 
