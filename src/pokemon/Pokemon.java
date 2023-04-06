@@ -51,21 +51,21 @@ public abstract class Pokemon {
 			return this.angriffspunkte;
 		}
 		
-		if((this instanceof Feuerpokemon) && (gegner instanceof Wasserpokemon)) {
+		if((this instanceof FirePokemon) && (gegner instanceof WaterPokemon)) {
 			if(attackentyp.equals("Feuer")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
 			}
 		}
 		
-		if((this instanceof Feuerpokemon) && (gegner instanceof Pflanzenpokemon)) {
+		if((this instanceof FirePokemon) && (gegner instanceof GrassPokemon)) {
 			if(attackentyp.equals("Feuer")){
 				System.out.println("Das war sehr effektiv! ");
 				return this.angriffspunkte*2;
 			}
 		}
 		
-		if((this instanceof Pflanzenpokemon) && (gegner instanceof Wasserpokemon)) {
+		if((this instanceof GrassPokemon) && (gegner instanceof WaterPokemon)) {
 			if(attackentyp.equals("Pflanze")){
 				System.out.println("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
@@ -77,14 +77,14 @@ public abstract class Pokemon {
 			} 
 		}
 		
-		if((this instanceof Pflanzenpokemon) && (gegner instanceof Feuerpokemon)) {
+		if((this instanceof GrassPokemon) && (gegner instanceof FirePokemon)) {
 			if(attackentyp.equals("Pflanze")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
 			} 
 		}
 		
-		if((this instanceof Wasserpokemon) && (gegner instanceof Feuerpokemon)) {
+		if((this instanceof WaterPokemon) && (gegner instanceof FirePokemon)) {
 			if(attackentyp.equals("Wasser")){
 				System.out.print("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
@@ -95,7 +95,7 @@ public abstract class Pokemon {
 				return this.angriffspunkte*2;
 			} 
 		}
-		if((this instanceof Wasserpokemon) && (gegner instanceof Pflanzenpokemon)) {
+		if((this instanceof WaterPokemon) && (gegner instanceof GrassPokemom)) {
 			if(attackentyp.equals("Wasser")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
@@ -103,7 +103,7 @@ public abstract class Pokemon {
 				return this.angriffspunkte;
 			}
 		}
-		if((this instanceof Wasserpokemon) && (gegner instanceof Wasserpokemon)) {
+		if((this instanceof WaterPokemon) && (gegner instanceof WaterPokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.println("Volltreffer!");
@@ -111,7 +111,7 @@ public abstract class Pokemon {
 			}
 		}
 		
-		if((this instanceof Feuerpokemon) && (gegner instanceof Feuerpokemon)) {
+		if((this instanceof FirePokemon) && (gegner instanceof FirePokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
@@ -119,7 +119,7 @@ public abstract class Pokemon {
 			}
 		}
 		
-		if((this instanceof  Pflanzenpokemon) && (gegner instanceof Pflanzenpokemon)) {
+		if((this instanceof  GrassPokemon) && (gegner instanceof GrassPokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
