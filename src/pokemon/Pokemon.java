@@ -48,20 +48,20 @@ public abstract class Pokemon {
 	 * */	
 	public double getAngriffsfaktor(Pokemon gegner, String attackType) {
 		if(attackType.equals(this.attack[0][1])) {
-			return this.angriffspunkte;
+			return this.attackPoints;
 		}
 		
 		if((this instanceof FirePokemon) && (gegner instanceof WaterPokemon)) {
 			if(attackType.equals("Fire")){
 				System.out.println("Das war nicht sehr effektiv! ");
-				return this.angriffspunkte/2;
+				return this.attackPoints/2;
 			}
 		}
 		
 		if((this instanceof FirePokemon) && (gegner instanceof GrassPokemon)) {
 			if(attackType.equals("Fire")){
 				System.out.println("Das war sehr effektiv! ");
-				return this.angriffspunkte*2;
+				return this.attackPoints*2;
 			}
 		}
 		
@@ -71,16 +71,16 @@ public abstract class Pokemon {
 				int impact = (int)(Math.random()*20);
 					if(impact > 15) {
 						System.out.print("Volltreffer! ");
-						return this.angriffspunkte*2+impact;
+						return this.attackPoints*2+impact;
 					}
-				return this.angriffspunkte*2;
+				return this.attackPoints*2;
 			} 
 		}
 		
 		if((this instanceof GrassPokemon) && (gegner instanceof FirePokemon)) {
 			if(attackType.equals("Grass")){
 				System.out.println("Das war nicht sehr effektiv! ");
-				return this.angriffspunkte/2;
+				return this.attackPoints/2;
 			} 
 		}
 		
@@ -90,24 +90,24 @@ public abstract class Pokemon {
 				int impact = (int)(Math.random()*20);
 					if(impact > 15) {
 						System.out.print("Volltreffer! ");
-						return this.angriffspunkte*2 +impact;
+						return this.attackPoints*2 +impact;
 					}
-				return this.angriffspunkte*2;
+				return this.attackPoints*2;
 			} 
 		}
 		if((this instanceof WaterPokemon) && (gegner instanceof GrassPokemom)) {
 			if(attackType.equals("Water")){
 				System.out.println("Das war nicht sehr effektiv! ");
-				return this.angriffspunkte/2;
+				return this.attackPoints/2;
 			} else {
-				return this.angriffspunkte;
+				return this.attackPoints;
 			}
 		}
 		if((this instanceof WaterPokemon) && (gegner instanceof WaterPokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.println("Volltreffer!");
-				return this.angriffspunkte*2+impact;
+				return this.attackPoints*2+impact;
 			}
 		}
 		
@@ -115,7 +115,7 @@ public abstract class Pokemon {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
-				return this.angriffspunkte+impact;
+				return this.attackPoints+impact;
 			}
 		}
 		
@@ -123,18 +123,18 @@ public abstract class Pokemon {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
-				return this.angriffspunkte+impact;
+				return this.attackPoints+impact;
 			}
 		}
-			return this.angriffspunkte;
+			return this.attackPoints;
 	}
 	
 	public void greiftAn(Pokemon gegner, String attacke) {
-		gegner.kampfpunkte = gegner.kampfpunkte - this.getAngriffsfaktor(gegner,attacke);
+		gegner.battlePoints = gegner.battlePoints - this.getAngriffsfaktor(gegner,attacke);
 	}	
 	
-	public void increaseErfahrungspunkte () {
-		this.erfahrungspunkte = this.erfahrungspunkte+30;
+	public void increaseExp () {
+		this.exp = this.exp+30;
 		System.out.println("Dein " + this.getClass().getSimpleName() + " hat 30 Erfahrungspunkte hinzugewonnen!");	
 	}
 	
