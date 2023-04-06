@@ -28,7 +28,7 @@ public abstract class Pokemon {
 	public Pokemon() {	
 	}
 	
-	public abstract Pokemon entwickeltSich();
+	public abstract Pokemon evolve();
 	
 	@Override
 	public String toString() {
