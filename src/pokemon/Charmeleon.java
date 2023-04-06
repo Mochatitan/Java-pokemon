@@ -1,7 +1,7 @@
-package ia;
+package pokemon;
 
-public class Glutexo extends Feuerpokemon {	
-	public Glutexo(String name){
+public class Charmeleon extends FirePokemon {	
+	public Charmeleon(String name){
 		super.name = name;
 		angriffspunkte = 25;
 		kampfpunkte = 140;
@@ -14,7 +14,7 @@ public class Glutexo extends Feuerpokemon {
 		pokedexID = "1";
 	}
 	
-	public Glutexo(Glumanda vorstufe) {
+	public Charmeleon(Charmander vorstufe) {
 		this.name = vorstufe.name;
 		this.kampfpunkte = vorstufe.kampfpunkte+20;
 		angriffspunkte = 25;
@@ -24,7 +24,7 @@ public class Glutexo extends Feuerpokemon {
 	}
 	
 	@Override
-	public Glurak entwickeltSich() {
-		return new Glurak(this);
+	public Charizard evolve() {
+		return new Charizard(this);
 	}
 }
