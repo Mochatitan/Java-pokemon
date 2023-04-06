@@ -1,8 +1,8 @@
-package ia;
+package pokemon;
 
-public class Glumanda extends Feuerpokemon{
+public class Charmander extends FirePokemon{
 	
-	public Glumanda(String name){
+	public Charmander(String name){
 		super.name = name;
 		angriffspunkte = 20;
 		kampfpunkte = 120;
@@ -15,12 +15,12 @@ public class Glumanda extends Feuerpokemon{
 		pokedexID = "0";
 	}
 	
-	public Glumanda() {
+	public Charmander() {
 	}
 
 	@Override
-	public Glutexo entwickeltSich() {
-		return new Glutexo(this);
+	public Charmeleon evolve() {
+		return new Charmeleon(this);
 	}
 
 }
