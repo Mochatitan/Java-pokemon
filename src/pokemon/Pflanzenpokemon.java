@@ -1,12 +1,12 @@
 package ia;
 
-public abstract class Pflanzenpokemon extends Pokemon{
+public abstract class GrassPokemon extends Pokemon{
 	
-	Pflanzenpokemon(String name) {
+	GrassPokemon(String name) {
 		super(name);
 	}
 	
-	Pflanzenpokemon(){	
+	GrassPokemon(){	
 	}
 
 	public boolean entwicklungsCheck(Pokemon[] team) {
@@ -25,7 +25,7 @@ public abstract class Pflanzenpokemon extends Pokemon{
 		return false;
 	}
 	
-	public abstract Pflanzenpokemon entwickeltSich();
+	public abstract GrassPokemon entwickeltSich();
 
 }
 
