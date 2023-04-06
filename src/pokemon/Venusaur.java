@@ -24,7 +24,7 @@ public class Venusaur extends GrassPokemon {
 	}
 
 	@Override
-	public Venusaur entwickeltSich() {
+	public Venusaur evolve() {
 		return this;
 	}
 }
