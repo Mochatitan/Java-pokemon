@@ -1,7 +1,7 @@
-package ia;
+package pokemon;
 
-public class Bisaflor extends Pflanzenpokemon {
-	public Bisaflor(String name){
+public class Venusaur extends GrassPokemon {
+	public Venusaur(String name){
 		super.name = name;
 		angriffspunkte = 30;
 		kampfpunkte = 160;
@@ -14,7 +14,7 @@ public class Bisaflor extends Pflanzenpokemon {
 		pokedexID = "5";
 	}
 	
-	public Bisaflor(Bisaknosp vorstufe) {
+	public Venusaur(Bisaknosp vorstufe) {
 		this.name = vorstufe.name;
 		this.kampfpunkte = vorstufe.kampfpunkte+20;
 		angriffspunkte = 30;
@@ -24,7 +24,7 @@ public class Bisaflor extends Pflanzenpokemon {
 	}
 
 	@Override
-	public Bisaflor entwickeltSich() {
+	public Venusaur entwickeltSich() {
 		return this;
 	}
 }
