@@ -1,8 +1,8 @@
-package ia;
+package pokemon;
 
-public class Schiggy extends Wasserpokemon {
+public class Squirtle extends WaterPokemon {
 
-	public Schiggy(String name){
+	public Squirtle(String name){
 		super.name = name;
 		angriffspunkte = 20;
 		kampfpunkte = 120;
@@ -15,10 +15,10 @@ public class Schiggy extends Wasserpokemon {
 		pokedexID = "6";
 	}
 	
-	public Schiggy(){
+	public Squirtle(){
 	}
 	
-	public Schillok entwickeltSich() {
-		return new Schillok(this);
+	public Wartortle evolve() {
+		return new Wartortle(this);
 	}
 }
