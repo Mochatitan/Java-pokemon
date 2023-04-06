@@ -1,4 +1,4 @@
-package ia;
+package pokemon;
 
 public abstract class Pokemon {
 	public String name;
@@ -32,41 +32,41 @@ public abstract class Pokemon {
 	
 	@Override
 	public String toString() {
-		String typ = "";
-		if(this instanceof Feuerpokemon) {
-			typ = "Feuer";
-		} else if(this instanceof Wasserpokemon) {
-			typ = "Wasser";
-		} else if (this instanceof Pflanzenpokemon) {
-			typ = "Pflanze";
+		String type = "";
+		if(this instanceof FirePokemon) {
+			type = "Fire";
+		} else if(this instanceof WaterPokemon) {
+			type = "Water";
+		} else if (this instanceof GrassPokemon) {
+			type = "Grass";
 		}
-		return(this.name + " (" + this.getClass().getSimpleName() + " | " + typ + " | " + this.kampfpunkte + " KP; " +  this.angriffspunkte + " AP)");
+		return(this.name + " (" + this.getClass().getSimpleName() + " | " + typ + " | " + this.battlePoints + " KP; " +  this.attackPoints + " AP)");
 	}
 
 	/* This factor depends on the type of the chosen attack.
 	 * It may be that you'll hit the wild Pokemon perfectly and get a "Volltreffer" (alias "impact") which causes more damage to its "kampfpunkte".
 	 * */	
-	public double getAngriffsfaktor(Pokemon gegner, String attackentyp) {
-		if(attackentyp.equals(this.attacke[0][1])) {
+	public double getAngriffsfaktor(Pokemon gegner, String attackType) {
+		if(attackType.equals(this.attack[0][1])) {
 			return this.angriffspunkte;
 		}
 		
 		if((this instanceof FirePokemon) && (gegner instanceof WaterPokemon)) {
-			if(attackentyp.equals("Feuer")){
+			if(attackType.equals("Fire")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
 			}
 		}
 		
 		if((this instanceof FirePokemon) && (gegner instanceof GrassPokemon)) {
-			if(attackentyp.equals("Feuer")){
+			if(attackType.equals("Fire")){
 				System.out.println("Das war sehr effektiv! ");
 				return this.angriffspunkte*2;
 			}
 		}
 		
 		if((this instanceof GrassPokemon) && (gegner instanceof WaterPokemon)) {
-			if(attackentyp.equals("Pflanze")){
+			if(attackType.equals("Grass")){
 				System.out.println("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
 					if(impact > 15) {
