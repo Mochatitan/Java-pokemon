@@ -78,14 +78,14 @@ public abstract class Pokemon {
 		}
 		
 		if((this instanceof GrassPokemon) && (gegner instanceof FirePokemon)) {
-			if(attackentyp.equals("Pflanze")){
+			if(attackType.equals("Grass")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
 			} 
 		}
 		
 		if((this instanceof WaterPokemon) && (gegner instanceof FirePokemon)) {
-			if(attackentyp.equals("Wasser")){
+			if(attackType.equals("Water")){
 				System.out.print("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
 					if(impact > 15) {
@@ -96,7 +96,7 @@ public abstract class Pokemon {
 			} 
 		}
 		if((this instanceof WaterPokemon) && (gegner instanceof GrassPokemom)) {
-			if(attackentyp.equals("Wasser")){
+			if(attackType.equals("Water")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.angriffspunkte/2;
 			} else {
