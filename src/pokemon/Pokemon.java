@@ -11,6 +11,16 @@ public abstract class Pokemon {
 	public String status = "angriff";
 	public String lebendig = "lebendig";
 	
+	public String name;
+        public String pokedexID;
+        public int evolution;
+        public double battlePoints;
+        public double attackPoints;
+        public String[][] attack = new String[2][2];
+        public int exp;
+        public String status = "attack";
+        public String alive = "alive";
+	
 	public Pokemon(String name){
 		this.name = name;
 	}
