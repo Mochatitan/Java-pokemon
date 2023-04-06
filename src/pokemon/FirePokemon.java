@@ -1,12 +1,12 @@
-package ia;
+package pokemon;
 
-public abstract class Feuerpokemon extends Pokemon{
+public abstract class FirePokemon extends Pokemon{
 	
-	Feuerpokemon(String name) {
+	FirePokemon(String name) {
 		super(name);
 	}
 	
-	Feuerpokemon(){
+	FirePokemom(){
 	}
 	
 	public boolean entwicklungsCheck(Pokemon[] team) {
@@ -31,7 +31,7 @@ public abstract class Feuerpokemon extends Pokemon{
 	}
 	
 	@Override
-	public abstract Feuerpokemon entwickeltSich();
+	public abstract FirePokemon entwickeltSich();
 
 }
 
