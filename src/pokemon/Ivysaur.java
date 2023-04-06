@@ -23,7 +23,7 @@ public class Ivysaur extends GrassPokemon{
 		pokedexID = "4";
 	}
 	
-	public Venusaur entwickeltSich() {
+	public Venusaur evolve() {
 		return new Venusaur(this);
 	}
 
