@@ -40,32 +40,32 @@ public abstract class Pokemon {
 		} else if (this instanceof GrassPokemon) {
 			type = "Grass";
 		}
-		return(this.name + " (" + this.getClass().getSimpleName() + " | " + typ + " | " + this.battlePoints + " KP; " +  this.attackPoints + " AP)");
+		return(this.name + " (" + this.getClass().getSimpleName() + " | " + type + " | " + this.battlePoints + " KP; " +  this.attackPoints + " AP)");
 	}
 
 	/* This factor depends on the type of the chosen attack.
 	 * It may be that you'll hit the wild Pokemon perfectly and get a "Volltreffer" (alias "impact") which causes more damage to its "kampfpunkte".
 	 * */	
-	public double getAngriffsfaktor(Pokemon gegner, String attackType) {
+	public double getAttackFactor(Pokemon opponent, String attackType) {
 		if(attackType.equals(this.attack[0][1])) {
 			return this.attackPoints;
 		}
 		
-		if((this instanceof FirePokemon) && (gegner instanceof WaterPokemon)) {
+		if((this instanceof FirePokemon) && (opponent instanceof WaterPokemon)) {
 			if(attackType.equals("Fire")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.attackPoints/2;
 			}
 		}
 		
-		if((this instanceof FirePokemon) && (gegner instanceof GrassPokemon)) {
+		if((this instanceof FirePokemon) && (opponent instanceof GrassPokemon)) {
 			if(attackType.equals("Fire")){
 				System.out.println("Das war sehr effektiv! ");
 				return this.attackPoints*2;
 			}
 		}
 		
-		if((this instanceof GrassPokemon) && (gegner instanceof WaterPokemon)) {
+		if((this instanceof GrassPokemon) && (opponent instanceof WaterPokemon)) {
 			if(attackType.equals("Grass")){
 				System.out.println("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
@@ -77,14 +77,14 @@ public abstract class Pokemon {
 			} 
 		}
 		
-		if((this instanceof GrassPokemon) && (gegner instanceof FirePokemon)) {
+		if((this instanceof GrassPokemon) && (opponent instanceof FirePokemon)) {
 			if(attackType.equals("Grass")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.attackPoints/2;
 			} 
 		}
 		
-		if((this instanceof WaterPokemon) && (gegner instanceof FirePokemon)) {
+		if((this instanceof WaterPokemon) && (opponent instanceof FirePokemon)) {
 			if(attackType.equals("Water")){
 				System.out.print("Das war sehr effektiv! ");
 				int impact = (int)(Math.random()*20);
@@ -95,7 +95,7 @@ public abstract class Pokemon {
 				return this.attackPoints*2;
 			} 
 		}
-		if((this instanceof WaterPokemon) && (gegner instanceof GrassPokemom)) {
+		if((this instanceof WaterPokemon) && (opponent instanceof GrassPokemom)) {
 			if(attackType.equals("Water")){
 				System.out.println("Das war nicht sehr effektiv! ");
 				return this.attackPoints/2;
@@ -103,7 +103,7 @@ public abstract class Pokemon {
 				return this.attackPoints;
 			}
 		}
-		if((this instanceof WaterPokemon) && (gegner instanceof WaterPokemon)) {
+		if((this instanceof WaterPokemon) && (opponent instanceof WaterPokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.println("Volltreffer!");
@@ -111,7 +111,7 @@ public abstract class Pokemon {
 			}
 		}
 		
-		if((this instanceof FirePokemon) && (gegner instanceof FirePokemon)) {
+		if((this instanceof FirePokemon) && (opponent instanceof FirePokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
@@ -119,7 +119,7 @@ public abstract class Pokemon {
 			}
 		}
 		
-		if((this instanceof  GrassPokemon) && (gegner instanceof GrassPokemon)) {
+		if((this instanceof  GrassPokemon) && (opponent instanceof GrassPokemon)) {
 			int impact = (int)(Math.random()*20);
 			if(impact > 15) {
 				System.out.print("Volltreffer! ");
@@ -129,8 +129,8 @@ public abstract class Pokemon {
 			return this.attackPoints;
 	}
 	
-	public void greiftAn(Pokemon gegner, String attacke) {
-		gegner.battlePoints = gegner.battlePoints - this.getAngriffsfaktor(gegner,attacke);
+	public void attacks(Pokemon opponent, String attack) {
+		opponent.battlePoints = opponent.battlePoints - this.getAttackFactor(opponent,attack);
 	}	
 	
 	public void increaseExp () {
