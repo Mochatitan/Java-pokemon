@@ -1,7 +1,7 @@
-package ia;
+package pokemon;
 
-public class Bisasam extends Pflanzenpokemon{
-	public Bisasam(String name){
+public class Bulbasaur extends GrassPokemon {
+	public Bulbasaur(String name){
 		super.name = name;
 		angriffspunkte = 20;
 		kampfpunkte = 120;
@@ -14,10 +14,10 @@ public class Bisasam extends Pflanzenpokemon{
 		pokedexID = "3";
 	}
 	
-	public Bisasam() {	
+	public Bulbasaur() {	
 	}
 	
-	public Bisaknosp entwickeltSich() {
-		return new Bisaknosp(this);
+	public Bulbasaur entwickeltSich() {
+		return new Ivysaur(this);
 	}
 }
